@@ -128,7 +128,7 @@ In JupyterLab or VS Code, click **Run All Cells** or execute cells sequentially 
 
 ## License & Citation
 
-The code and materials in this repository are released under the MIT License for educational and research use. If you use these examples in academic coursework or research, please cite the textbook:
+If you use these examples in academic coursework or research, please cite the textbook:
 
 ```bibtex
 @book{bandopadhyay2026python,
