@@ -41,3 +41,11 @@ venv.bak/
 *.swo
 *~
 .DS_Store
+
+# Files written by running the book's listings and solutions from the repo root
+/*.pdf
+/*.png
+/*.txt
+/*.csv
+/*.wav
+!/requirements.txt
