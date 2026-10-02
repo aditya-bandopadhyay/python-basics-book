@@ -1,139 +1,91 @@
-# Python by Curiosity: From First Loops to Scientific Modeling and Interactive Apps
+# Python by Curiosity — companion code
 
-**Companion Code Repository, Jupyter Notebooks, and Datasets**
+Companion repository for the textbook **Python by Curiosity: From First Loops to Scientific
+Modeling and Interactive Apps** by Aditya Bandopadhyay (IIT Kharagpur) and Subhasree Pradhan
+(Jhargram Raj College).
 
-**Authors:**
-- **Dr. Aditya Bandopadhyay**, Associate Professor, Department of Mechanical Engineering, Indian Institute of Technology Kharagpur
-- **Dr. Subhasree Pradhan**, Assistant Professor, Department of Physics, Jhargram Raj College
+Everything here is generated from the book itself, so the code matches the printed listings.
 
----
+| Folder | What is in it |
+| --- | --- |
+| [`codes/`](codes/) | One script per chapter. Chapters 1–13: all of the chapter's listings in book order. Chapters 14–19: the chapter's main desktop app. |
+| [`codes/listings/`](codes/listings/) | Every listing in the book as its own file, numbered in book order (e.g. `codes/listings/ch02_numbers/04_code_2_1_creating_and_printing_variables.py`). |
+| [`notebooks/`](notebooks/) | One Jupyter notebook per chapter, one code cell per listing. Chapters 1–13 are saved with their outputs and plots. |
+| [`solutions/`](solutions/) | Tested solutions to every DIY task, debugging task and mini-project, plus MCQ answers and short-answer hints. |
+| [`data/`](data/) | Data files used in the book (Chapters 7, 8, 10, 12 and 18). |
+| [`figures/`](figures/) | Images used by the programs (e.g. `trophy.png`) and screenshots of the apps. |
 
-## Overview
+## Getting started
 
-This repository hosts all companion code resources for the textbook **Python by Curiosity**. It contains:
-- **`codes/`**: 19 standalone, executable Python scripts (`ch01_why_computers.py` through `ch19_music_player.py`).
-- **`notebooks/`**: 19 interactive Jupyter notebooks with step-by-step mathematical formulations, executable code cells, and inline figures.
-- **`data/`**: Sample experimental CSV datasets and telemetry sensor logs.
-- **`figures/`**: Graphical UI assets (such as `trophy.png` and interface mockups).
-
----
-
-## Quickstart & Installation
-
-### 1. Clone the Repository
 ```bash
 git clone https://github.com/aditya-bandopadhyay/python-basics-book.git
 cd python-basics-book
-```
-
-### 2. Create a Virtual Environment (Recommended)
-```bash
-python3 -m venv venv
-source venv/bin/activate      # On Linux / macOS
-# or: .\venv\Scripts\activate # On Windows
-```
-
-### 3. Install Dependencies
-```bash
-pip install --upgrade pip
+python -m venv venv
+source venv/bin/activate          # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
----
+Tkinter (Part III) comes with Python on Windows and macOS. On Debian/Ubuntu install it with
+`sudo apt install python3-tk`.
 
-## Directory Layout
+**Run everything from the repository root**, so that paths such as `data/grades.csv` work:
 
-```
-python-basics-book/
-├── codes/                      # Standalone Python scripts (.py)
-│   ├── ch01_why_computers.py
-│   ├── ch02_numbers.py
-│   ├── ...
-│   └── ch19_music_player.py
-├── notebooks/                  # Interactive Jupyter notebooks (.ipynb)
-│   ├── ch01_why_computers.ipynb
-│   ├── ch02_numbers.ipynb
-│   ├── ...
-│   └── ch19_music_player.ipynb
-├── data/                       # CSV datasets and telemetry logs
-│   ├── sensor_log.csv
-│   ├── telemetry_speed.csv
-│   ├── grades.csv
-│   └── weather_telemetry.csv
-├── figures/                    # Application image assets
-│   └── trophy.png
-├── requirements.txt            # Python package dependencies
-├── .gitignore                  # Git ignore rules for Python/Jupyter
-└── README.md                   # This documentation
-```
-
----
-
-## Master Directory of Chapters & Programs
-
-### Part I: Python Basics
-
-| Chapter | Script | Notebook | Topic / Practical Project |
-| :--- | :--- | :--- | :--- |
-| **01. Why Computers Follow Rules** | [`ch01_why_computers.py`](codes/ch01_why_computers.py) | [`ch01_why_computers.ipynb`](notebooks/ch01_why_computers.ipynb) | Environment verification & string output |
-| **02. Playing with Numbers** | [`ch02_numbers.py`](codes/ch02_numbers.py) | [`ch02_numbers.ipynb`](notebooks/ch02_numbers.ipynb) | Monthly loan installment (EMI) calculator |
-| **03. Making Decisions** | [`ch03_decisions.py`](codes/ch03_decisions.py) | [`ch03_decisions.ipynb`](notebooks/ch03_decisions.ipynb) | Automated discount validation & traffic light logic |
-| **04. Loops and Repetition** | [`ch04_loops.py`](codes/ch04_loops.py) | [`ch04_loops.ipynb`](notebooks/ch04_loops.ipynb) | Arithmetic & geometric sequence sums |
-| **05. Lists, Tuples, Sets & Dicts** | [`ch05_lists.py`](codes/ch05_lists.py) | [`ch05_lists.ipynb`](notebooks/ch05_lists.ipynb) | Examination marks rank & summary analysis |
-| **06. Functions and Code Reuse** | [`ch06_functions.py`](codes/ch06_functions.py) | [`ch06_functions.ipynb`](notebooks/ch06_functions.ipynb) | Modular scientific converters & scopes |
-
-### Part II: Scientific Computing & Modeling
-
-| Chapter | Script | Notebook | Topic / Practical Project |
-| :--- | :--- | :--- | :--- |
-| **07. Scientific Arrays with NumPy** | [`ch07_arrays_numpy.py`](codes/ch07_arrays_numpy.py) | [`ch07_arrays_numpy.ipynb`](notebooks/ch07_arrays_numpy.ipynb) | Numerical differentiation of velocity signals |
-| **08. Visualizing Data with Matplotlib** | [`ch08_matplotlib.py`](codes/ch08_matplotlib.py) | [`ch08_matplotlib.ipynb`](notebooks/ch08_matplotlib.ipynb) | Multi-panel figures & Challenger O-ring analysis |
-| **09. Solving Nonlinear Equations** | [`ch09_equations.py`](codes/ch09_equations.py) | [`ch09_equations.ipynb`](notebooks/ch09_equations.ipynb) | Bisection, Newton--Raphson & trajectory roots |
-| **10. Numerical Integration & Centroids**| [`ch10_integration.py`](codes/ch10_integration.py) | [`ch10_integration.ipynb`](notebooks/ch10_integration.ipynb) | CAN-bus vehicle distance & riverbank centroid |
-| **11. Ordinary Differential Equations** | [`ch11_odes.py`](codes/ch11_odes.py) | [`ch11_odes.ipynb`](notebooks/ch11_odes.ipynb) | Euler, RK4 & water tank draining dynamics |
-| **12. Data Wrangling and Statistics** | [`ch12_data_stats.py`](codes/ch12_data_stats.py) | [`ch12_data_stats.ipynb`](notebooks/ch12_data_stats.ipynb) | Marble simulation, dice rolls & paired $t$-test |
-| **13. Optimization and Curve Fitting** | [`ch13_optimization.py`](codes/ch13_optimization.py) | [`ch13_optimization.ipynb`](notebooks/ch13_optimization.ipynb) | Gradient descent, Hooke's law & Snell's optics |
-
-### Part III: Graphical User Interfaces & Applications
-
-| Chapter | Script | Notebook | Topic / Practical Project |
-| :--- | :--- | :--- | :--- |
-| **14. Tkinter Basics** | [`ch14_tkinter_basics.py`](codes/ch14_tkinter_basics.py) | [`ch14_tkinter_basics.ipynb`](notebooks/ch14_tkinter_basics.ipynb) | Two-number adder & stateful click counter GUI |
-| **15. Layouts and User Experience** | [`ch15_layouts_ux.py`](codes/ch15_layouts_ux.py) | [`ch15_layouts_ux.ipynb`](notebooks/ch15_layouts_ux.ipynb) | Mini Image Studio (edges, sliders, grayscale) |
-| **16. Log & Antilog Calculator** | [`ch16_calculator.py`](codes/ch16_calculator.py) | [`ch16_calculator.ipynb`](notebooks/ch16_calculator.ipynb) | Scientific Logarithm/Antilogarithm desktop helper |
-| **17. ODE Solver Visualizer** | [`ch17_ode_visualizer.py`](codes/ch17_ode_visualizer.py) | [`ch17_ode_visualizer.ipynb`](notebooks/ch17_ode_visualizer.ipynb) | Interactive RK4 solver with live plot canvas |
-| **18. CSV Data Explorer Dashboard** | [`ch18_data_explorer.py`](codes/ch18_data_explorer.py) | [`ch18_data_explorer.ipynb`](notebooks/ch18_data_explorer.ipynb) | Multi-panel CSV table, summary cards & plots |
-| **19. Desktop Audio Player** | [`ch19_music_player.py`](codes/ch19_music_player.py) | [`ch19_music_player.ipynb`](notebooks/ch19_music_player.ipynb) | Audio player with live spectrum visualizer |
-
----
-
-## How to Run
-
-### Running Python Scripts
-Navigate to the repository root and run any script directly:
 ```bash
-python codes/ch02_numbers.py
-python codes/ch15_layouts_ux.py
-python codes/ch16_calculator.py
+python codes/ch02_numbers.py                                   # a whole chapter
+python codes/listings/ch11_odes/03_code_11_3_rk4_solver_from_scratch.py   # one listing
+python codes/ch16_calculator.py                                # a desktop app
+python solutions/ch09_equations/mini_project.py                # a solution
+jupyter lab notebooks/                                          # the notebooks
 ```
 
-### Launching JupyterLab
-To open the interactive notebooks:
-```bash
-jupyter lab notebooks/
-```
-In JupyterLab or VS Code, click **Run All Cells** or execute cells sequentially with `Shift + Enter`.
+A few listings are fragments or deliberate mistakes shown in the book (for example
+`if score = 100:`); their files say so in a `NOTE` comment, and the chapter scripts skip them.
+Listings that read keyboard input are skipped by the chapter scripts too but can be run on
+their own. Some listings save figures (e.g. `sine_wave.pdf`) into the folder you run them from.
 
----
+## Chapters
 
-## License & Citation
+| Ch | Title | Script | Listings | Notebook | Solutions | Highlights |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | Why Computers Follow Rules | [`ch01_why_computers.py`](codes/ch01_why_computers.py) | [4 listings](codes/listings/ch01_why_computers/) | [notebook](notebooks/ch01_why_computers.ipynb) | [solutions](solutions/ch01_why_computers/) | Cooking-assistant algorithm; the Mars Climate Orbiter unit mix-up |
+| 2 | Playing with Numbers | [`ch02_numbers.py`](codes/ch02_numbers.py) | [13 listings](codes/listings/ch02_numbers/) | [notebook](notebooks/ch02_numbers.ipynb) | [solutions](solutions/ch02_numbers/) | Floating-point arithmetic, f-strings; the Patriot clock-drift simulation |
+| 3 | Making Decisions | [`ch03_decisions.py`](codes/ch03_decisions.py) | [10 listings](codes/listings/ch03_decisions/) | [notebook](notebooks/ch03_decisions.ipynb) | [solutions](solutions/ch03_decisions/) | if/elif/else, Boolean logic; Petrov's false alarm |
+| 4 | Loops and Repetition | [`ch04_loops.py`](codes/ch04_loops.py) | [11 listings](codes/listings/ch04_loops/) | [notebook](notebooks/ch04_loops.ipynb) | [solutions](solutions/ch04_loops/) | for/while loops, AP and GP series; Tower of Hanoi move counts |
+| 5 | Lists, Tuples, Sets, and Dictionaries | [`ch05_lists.py`](codes/ch05_lists.py) | [14 listings](codes/listings/ch05_lists/) | [notebook](notebooks/ch05_lists.ipynb) | [solutions](solutions/ch05_lists/) | Lists, dictionaries, strings; class report card |
+| 6 | Functions and Code Reuse | [`ch06_functions.py`](codes/ch06_functions.py) | [17 listings](codes/listings/ch06_functions/) | [notebook](notebooks/ch06_functions.ipynb) | [solutions](solutions/ch06_functions/) | Functions, recursion, lambda, exceptions, files; statistics library |
+| 7 | Scientific Arrays with NumPy | [`ch07_arrays_numpy.py`](codes/ch07_arrays_numpy.py) | [16 listings](codes/listings/ch07_arrays_numpy/) | [notebook](notebooks/ch07_arrays_numpy.ipynb) | [solutions](solutions/ch07_arrays_numpy/) | NumPy arrays, masks, broadcasting; mesh-current solver, telescope image |
+| 8 | Visualizing Data with Matplotlib | [`ch08_matplotlib.py`](codes/ch08_matplotlib.py) | [17 listings](codes/listings/ch08_matplotlib/) | [notebook](notebooks/ch08_matplotlib.ipynb) | [solutions](solutions/ch08_matplotlib/) | Line, scatter, bar, histogram, contour, error-bar plots; Challenger O-ring data |
+| 9 | Solving Nonlinear Equations | [`ch09_equations.py`](codes/ch09_equations.py) | [9 listings](codes/listings/ch09_equations/) | [notebook](notebooks/ch09_equations.ipynb) | [solutions](solutions/ch09_equations/) | Bisection, Newton-Raphson, brentq, fsolve; shot-put release angles |
+| 10 | Numerical Integration and Centroids | [`ch10_integration.py`](codes/ch10_integration.py) | [8 listings](codes/listings/ch10_integration/) | [notebook](notebooks/ch10_integration.ipynb) | [solutions](solutions/ch10_integration/) | Trapezoid/Simpson rules, centroids, quad/dblquad; telemetry distance, land survey |
+| 11 | Ordinary Differential Equations | [`ch11_odes.py`](codes/ch11_odes.py) | [9 listings](codes/listings/ch11_odes/) | [notebook](notebooks/ch11_odes.ipynb) | [solutions](solutions/ch11_odes/) | Euler, RK4, solve_ivp; coffee cooling, RC circuit, SIR epidemic, pendulum |
+| 12 | Data Wrangling and Statistics | [`ch12_data_stats.py`](codes/ch12_data_stats.py) | [12 listings](codes/listings/ch12_data_stats/) | [notebook](notebooks/ch12_data_stats.ipynb) | [solutions](solutions/ch12_data_stats/) | Simulation, statistics, correlation, t-test, outliers; placement-salary mystery |
+| 13 | Optimization and Curve Fitting | [`ch13_optimization.py`](codes/ch13_optimization.py) | [12 listings](codes/listings/ch13_optimization/) | [notebook](notebooks/ch13_optimization.ipynb) | [solutions](solutions/ch13_optimization/) | Gradient descent, curve_fit, minimize; Fermat's least-time refraction |
+| 14 | Tkinter Basics | [`ch14_tkinter_basics.py`](codes/ch14_tkinter_basics.py) | [16 listings](codes/listings/ch14_tkinter_basics/) | [notebook](notebooks/ch14_tkinter_basics.ipynb) | [solutions](solutions/ch14_tkinter_basics/) | Tkinter windows, widgets, events, classes; two-number adder |
+| 15 | Layouts and User Experience | [`ch15_layouts_ux.py`](codes/ch15_layouts_ux.py) | [11 listings](codes/listings/ch15_layouts_ux/) | [notebook](notebooks/ch15_layouts_ux.ipynb) | [solutions](solutions/ch15_layouts_ux/) | pack/grid layouts, frames, image studio with edge detection |
+| 16 | Building a Logarithm & Antilogarithm Calculator | [`ch16_calculator.py`](codes/ch16_calculator.py) | [5 listings](codes/listings/ch16_calculator/) | [notebook](notebooks/ch16_calculator.ipynb) | [solutions](solutions/ch16_calculator/) | Logarithm & antilogarithm desktop calculator |
+| 17 | Building an ODE Solver Visualizer | [`ch17_ode_visualizer.py`](codes/ch17_ode_visualizer.py) | [3 listings](codes/listings/ch17_ode_visualizer/) | [notebook](notebooks/ch17_ode_visualizer.ipynb) | [solutions](solutions/ch17_ode_visualizer/) | ODE solver with an embedded Matplotlib plot |
+| 18 | Building a CSV Data Explorer Dashboard | [`ch18_data_explorer.py`](codes/ch18_data_explorer.py) | [6 listings](codes/listings/ch18_data_explorer/) | [notebook](notebooks/ch18_data_explorer.ipynb) | [solutions](solutions/ch18_data_explorer/) | CSV data explorer with statistics and histograms |
+| 19 | Desktop Audio Player and Frequency Visualizer | [`ch19_music_player.py`](codes/ch19_music_player.py) | [8 listings](codes/listings/ch19_music_player/) | [notebook](notebooks/ch19_music_player.ipynb) | [solutions](solutions/ch19_music_player/) | Music player interface with playlist, scrub bar and visualizer |
+
+## Data files
+
+| File | Used in | Contents |
+| --- | --- | --- |
+| `data/sensor_log.csv` | Ch 7, Code 7.8 | Time, temperature and pressure: the file that listing writes |
+| `data/sensor_log.dat` | Ch 8, Gnuplot example | Time, measured and theoretical displacement of a damped oscillator |
+| `data/telemetry_speed.csv` | Ch 10, Worked Example 10.1 | Vehicle speed every 5 s over a 40 s run |
+| `data/grades.csv` | Ch 12, Code 12.5 and Mini-Project 12 | 20 students: Maths, Science, English |
+| `data/marks.csv` | Ch 12, DIY D4 | 20 students: Maths and Physics (with one outlier) |
+| `data/weather_telemetry.csv` | Ch 18 data explorer | Hourly temperature, humidity, pressure and wind speed |
+
+## Citation
 
 If you use these examples in academic coursework or research, please cite the textbook:
 
 ```bibtex
 @book{bandopadhyay2026python,
-  title     = {Python by Curiosity: From First Loops to Scientific Modeling and Interactive Apps},
-  author    = {Bandopadhyay, Aditya and Pradhan, Subhasree},
-  year      = {2026}
+  title  = {Python by Curiosity: From First Loops to Scientific Modeling and Interactive Apps},
+  author = {Bandopadhyay, Aditya and Pradhan, Subhasree},
+  year   = {2026}
 }
 ```
