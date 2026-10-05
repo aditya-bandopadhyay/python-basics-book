@@ -1,5 +1,5 @@
 # Ordinary Differential Equations -- Code 11.2: Comparing step sizes
-# (book source: ch11_odes.tex, line 170)
+# (book source: ch11_odes.tex, line 245)
 # NOTE: Needs code from 'Code 11.1: Euler's method from scratch' (included below as setup).
 
 # ---- setup: code from earlier in the chapter ----

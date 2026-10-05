@@ -1,5 +1,5 @@
 # Ordinary Differential Equations -- Code 11.4: Solving ODEs with SciPy
-# (book source: ch11_odes.tex, line 263)
+# (book source: ch11_odes.tex, line 338)
 
 import numpy as np
 from scipy.integrate import solve_ivp

@@ -1,5 +1,5 @@
 # Ordinary Differential Equations -- Worked Example 11.4: 2nd-Order Non-linear Damped Pendulum ODE System
-# (book source: ch11_odes.tex, line 542)
+# (book source: ch11_odes.tex, line 617)
 
 import numpy as np
 import scipy.integrate as integrate

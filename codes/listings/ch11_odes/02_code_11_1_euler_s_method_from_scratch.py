@@ -1,5 +1,5 @@
 # Ordinary Differential Equations -- Code 11.1: Euler's method from scratch
-# (book source: ch11_odes.tex, line 111)
+# (book source: ch11_odes.tex, line 186)
 
 import numpy as np
 import matplotlib.pyplot as plt

@@ -1,5 +1,5 @@
 # Ordinary Differential Equations -- Worked Example 11.2: Classical RK4 Solver - Vertical Projectile with Air Resistance
-# (book source: ch11_odes.tex, line 416)
+# (book source: ch11_odes.tex, line 491)
 
 import numpy as np
 import matplotlib.pyplot as plt
