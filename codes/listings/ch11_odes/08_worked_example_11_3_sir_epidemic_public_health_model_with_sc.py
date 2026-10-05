@@ -1,5 +1,5 @@
 # Ordinary Differential Equations -- Worked Example 11.3: SIR Epidemic Public Health Model with scipy.integrate.solve_ivp
-# (book source: ch11_odes.tex, line 480)
+# (book source: ch11_odes.tex, line 555)
 
 import numpy as np
 import scipy.integrate as integrate
